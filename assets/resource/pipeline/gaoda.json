@@ -12,6 +12,12 @@
         "recognition": "TemplateMatch",
         "template": "boss.png",
         "action": "Click",
+        "next": "高达-是否已打开地图"
+    },
+    "高达-是否已打开地图": {
+        "recognition": "OCR",
+        "expected": "港城",
+        "action": "DoNothing",
         "next": "高达-放大地图"
     },
     "高达-放大地图": {
