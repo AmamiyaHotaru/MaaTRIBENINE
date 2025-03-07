@@ -1,0 +1,136 @@
+{
+    "棒球-调查": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Click",
+        "next": [
+            "棒球-开始对话"
+        ]
+    },
+    "棒球-开始对话": {
+        "recognition": "OCR",
+        "expected": "今天也一起",
+        "action": "Click",
+        "next": "棒球-确定"
+    },
+    "棒球-确定": {
+        "recognition": "OCR",
+        "expected": "确定",
+        "action": "Click",
+        "post_delay": 10000,
+        "next": "棒球-开始XB"
+    },
+    "棒球-开始XB": {
+        "recognition": "OCR",
+        "expected": "开始XB",
+        "action": "Click",
+        "next": "棒球-向左移动"
+    },
+    "棒球-向左移动": {
+        "recognition": "TemplateMatch",
+        "template": "guangbiao.png",
+        "action": "Swipe",
+        "begin": [
+            342,
+            555,
+            1,
+            1
+        ],
+        "end": [
+            300,
+            554,
+            1,
+            1
+        ],
+        "duration": 200,
+        "next": [
+            "棒球-挥棒"
+        ]
+    },
+    "棒球-挥棒": {
+        "action": "Click",
+        "target": [
+            1145,
+            481,
+            245,
+            37
+        ],
+        "next": [
+            "棒球-是否升级",
+            "棒球-向左移动",
+            "棒球-跳过"
+        ]
+    },
+    "棒球-跳过": {
+        "recognition": "TemplateMatch",
+        "template": "jilu.png",
+        "action": "Click",
+        "inverse": true,
+        "target": [
+            726,
+            214,
+            355,
+            264
+        ],
+        "next": [
+            "棒球-是否升级",
+            "棒球-结束",
+            "棒球-跳过",
+            "棒球-向左移动"
+        ],
+        "post_delay": 500
+    },
+    "棒球-是否升级": {
+        "recognition": "OCR",
+        "expected": "获得",
+        "action": "Click",
+        "next": "棒球-跳过"
+    },
+    "棒球-结束": {
+        "recognition": "OCR",
+        "expected": "距离下一项奖励还有",
+        "action": "Click",
+        "target": [
+            1364,
+            650,
+            28,
+            14
+        ],
+        "post_delay": 10000,
+        "next": [
+            "棒球-结束对话1",
+            "棒球-跳过"
+        ]
+    },
+    "棒球-结束对话1": {
+        "recognition": "OCR",
+        "expected": [
+            "这次的比赛很可惜呢",
+            "真是精彩的胜利"
+        ],
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            726,
+            214,
+            355,
+            264
+        ],
+        "next": [
+            "棒球-结束对话2"
+        ]
+    },
+    "棒球-结束对话2": {
+        "pre_delay": 1000,
+        "action": "Click",
+        "target": [
+            726,
+            214,
+            355,
+            264
+        ],
+        "next": [
+            "棒球-调查"
+        ]
+    }
+}

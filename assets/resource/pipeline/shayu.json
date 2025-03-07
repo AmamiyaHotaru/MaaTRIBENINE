@@ -1,0 +1,74 @@
+{
+    "鲨鱼-调查": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Click",
+        "next": [
+            "鲨鱼-开始挑战"
+        ]
+    },
+    "鲨鱼-开始挑战": {
+        "pre_delay": 2000,
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "next": "鲨鱼-确定挑战",
+        "post_delay": 2000
+    },
+    "鲨鱼-确定挑战": {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "next": "鲨鱼-举盾",
+        "post_delay": 10000
+    },
+    "鲨鱼-举盾": {
+        "action": "Swipe",
+        "begin": [
+            1259,
+            454,
+            26,
+            26
+        ],
+        "end": [
+            966,
+            463,
+            1,
+            1
+        ],
+        "duration": 10000,
+        "next": [
+            "鲨鱼-结束",
+            "鲨鱼-举盾"
+        ]
+    },
+    "鲨鱼-结束": {
+        "recognition": "OCR",
+        "expected": "结束",
+        "action": "Click",
+        "next": "鲨鱼-移动",
+        "post_delay": 10000
+    },
+    "鲨鱼-移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Swipe",
+        "begin": [
+            310,
+            518,
+            1,
+            1
+        ],
+        "end": [
+            310,
+            498,
+            1,
+            1
+        ],
+        "duration": 5000,
+        "next": [
+            "鲨鱼-调查",
+            "鲨鱼-移动"
+        ]
+    }
+}

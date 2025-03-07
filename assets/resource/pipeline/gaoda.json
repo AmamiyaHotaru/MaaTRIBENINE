@@ -1,0 +1,92 @@
+{
+    "高达-调查": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Click",
+        "next": [
+            "高达-开始挑战"
+        ]
+    },
+    "高达-开始挑战": {
+        "pre_delay": 2000,
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "next": "高达-确定挑战",
+        "post_delay": 2000
+    },
+    "高达-确定挑战": {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "next": "高达-举盾",
+        "post_delay": 10000
+    },
+    "高达-举盾": {
+        "action": "Swipe",
+        "begin": [
+            1259,
+            454,
+            26,
+            26
+        ],
+        "end": [
+            966,
+            463,
+            1,
+            1
+        ],
+        "duration": 10000,
+        "next": [
+            "高达-结束",
+            "高达-举盾"
+        ]
+    },
+    "高达-结束": {
+        "recognition": "OCR",
+        "expected": "结束",
+        "action": "Click",
+        "next": "高达-向下移动",
+        "post_delay": 15000
+    },
+    "高达-向下移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Swipe",
+        "begin": [
+            305,
+            573,
+            1,
+            1
+        ],
+        "end": [
+            305,
+            581,
+            1,
+            1
+        ],
+        "duration": 300,
+        "next": [
+            "高达-向右移动"
+        ]
+    },
+    "高达-向右移动": {
+        "action": "Swipe",
+        "begin": [
+            330,
+            549,
+            1,
+            1
+        ],
+        "end": [
+            335,
+            549,
+            1,
+            1
+        ],
+        "duration": 2000,
+        "next": [
+            "高达-调查"
+        ]
+    }
+}
