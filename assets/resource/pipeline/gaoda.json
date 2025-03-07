@@ -4,8 +4,83 @@
         "template": "diaocha.png",
         "action": "Click",
         "next": [
-            "高达-开始挑战"
+            "高达-开始挑战",
+            "高达-打开地图"
         ]
+    },
+    "高达-打开地图": {
+        "recognition": "TemplateMatch",
+        "template": "boss.png",
+        "action": "Click",
+        "next": "高达-放大地图"
+    },
+    "高达-放大地图": {
+        "recognition": "TemplateMatch",
+        "template": "fangda.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "高达-是否是最大放大倍数",
+            "高达-放大地图"
+        ]
+    },
+    "高达-是否是最大放大倍数": {
+        "recognition": "TemplateMatch",
+        "template": "zuida.png",
+        "threshold": 0.9,
+        "action": "DoNothing",
+        "next": "高达-点击篝火"
+    },
+    "高达-点击篝火": {
+        "recognition": "TemplateMatch",
+        "template": "gouhuo.png",
+        "action": "Click",
+        "next": "高达-点击移动"
+    },
+    "高达-点击移动": {
+        "recognition": "OCR",
+        "expected": "移动",
+        "action": "Click",
+        "next": "高达-向左移动"
+    },
+    "高达-向左移动": {
+        "pre_delay": 3000,
+        "recognition": "OCR",
+        "expected": "活动维持装置",
+        "action": "Swipe",
+        "begin": [
+            287,
+            548,
+            1,
+            1
+        ],
+        "end": [
+            237,
+            548,
+            1,
+            1
+        ],
+        "duration": 3000,
+        "next": "高达-向上移动"
+    },
+    "高达-向上移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Swipe",
+        "begin": [
+            310,
+            518,
+            1,
+            1
+        ],
+        "end": [
+            310,
+            498,
+            1,
+            1
+        ],
+        "duration": 3000,
+        "next": "高达-调查"
     },
     "高达-开始挑战": {
         "pre_delay": 2000,
