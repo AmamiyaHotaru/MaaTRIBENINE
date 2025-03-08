@@ -11,4 +11,4 @@
 
 ## 使用说明
 运行脚本前确定当前站在目标BOSS前，且交互键亮起
-物理机Android14实测无法使用MFAWPF，手动连接后使用MaaPiCli功能正常
+Android10以上需要将连接设置的触控模式更改为AdbInput
