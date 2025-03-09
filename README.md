@@ -11,7 +11,6 @@
 
 ## 使用说明
 
-具体教程见：https://www.xiaoheihe.cn/app/bbs/link/148775590?
 
 Android10以上使用MFAWPF.exe，需要先把设置里面的连接设置-触控模式改为 “AdbInput”
 
