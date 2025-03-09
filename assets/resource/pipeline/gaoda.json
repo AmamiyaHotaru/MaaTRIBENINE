@@ -105,10 +105,11 @@
         "recognition": "OCR",
         "expected": "开始挑战",
         "action": "Click",
-        "next": "高达-获取方向键范围",
-        "post_delay": 10000
+        "next": "高达-获取方向键范围"
     },
     "高达-获取方向键范围": {
+        "pre_delay": 15000,
+        "timeout": 30000,
         "recognition": "TemplateMatch",
         "template": "fangxiangjian.png",
         "action": "DoNothing",
