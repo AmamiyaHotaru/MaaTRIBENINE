@@ -13,7 +13,10 @@
 
 具体教程见：https://www.xiaoheihe.cn/app/bbs/link/148775590?
 
-真机分辨率差异较大，无法保障所有设备都能正常运行,如果遇到移动异常，使用[MFATOOLS](https://github.com/SweetSmellFox/MFATools)手动修改node节点中坐标，具体方法见上面链接
+真机分辨率差异较大，无法保障所有设备都能正常运行,仅在2408×1080 2340×1080分辨率下进行过测试
+
+
+如果遇到移动异常，使用[MFATOOLS](https://github.com/SweetSmellFox/MFATools)手动修改node节点中坐标，具体方法见上面链接
 
 
 
