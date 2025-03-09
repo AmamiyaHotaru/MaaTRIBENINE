@@ -51,21 +51,23 @@
         "next": "高达-向左移动"
     },
     "高达-向左移动": {
-        "pre_delay": 3000,
-        "recognition": "OCR",
-        "expected": "活动维持装置",
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "threshold": 0.7,
         "action": "Swipe",
-        "begin": [
-            287,
-            548,
-            1,
-            1
+        "begin": "高达-获取方向键范围",
+        "begin_offset": [
+            -10,
+            29.5,
+            -100,
+            -100
         ],
-        "end": [
-            237,
-            548,
-            1,
-            1
+        "end": "高达-获取方向键范围",
+        "end_offset": [
+            -40,
+            29.5,
+            -100,
+            -100
         ],
         "duration": 3000,
         "next": "高达-向上移动"
@@ -73,20 +75,23 @@
     "高达-向上移动": {
         "recognition": "TemplateMatch",
         "template": "diaocha.png",
+        "threshold": 0.7,
         "action": "Swipe",
-        "begin": [
-            310,
-            518,
-            1,
-            1
+        "begin": "高达-获取方向键范围",
+        "begin_offset": [
+            29.5,
+            -10,
+            -100,
+            -100
         ],
-        "end": [
-            310,
-            498,
-            1,
-            1
+        "end": "高达-获取方向键范围",
+        "end_offset": [
+            29.5,
+            -50,
+            -100,
+            -100
         ],
-        "duration": 3000,
+        "duration": 3200,
         "next": "高达-调查"
     },
     "高达-开始挑战": {
@@ -100,8 +105,15 @@
         "recognition": "OCR",
         "expected": "开始挑战",
         "action": "Click",
-        "next": "高达-举盾",
+        "next": "高达-获取方向键范围",
         "post_delay": 10000
+    },
+    "高达-获取方向键范围": {
+        "recognition": "TemplateMatch",
+        "template": "fangxiangjian.png",
+        "action": "DoNothing",
+        "next": "高达-举盾",
+        "threshold": 0.7
     },
     "高达-举盾": {
         "action": "Swipe",
@@ -133,41 +145,45 @@
     "高达-向下移动": {
         "recognition": "TemplateMatch",
         "template": "diaocha.png",
+        "threshold": 0.7,
         "action": "Swipe",
-        "begin": [
-            305,
-            573,
-            1,
-            1
+        "begin": "高达-获取方向键范围",
+        "begin_offset": [
+            29.5,
+            70,
+            -100,
+            -100
         ],
-        "end": [
-            305,
-            581,
-            1,
-            1
+        "end": "高达-获取方向键范围",
+        "end_offset": [
+            29.5,
+            100,
+            -100,
+            -100
         ],
         "duration": 400,
-        "next": [
-            "高达-向右移动"
-        ]
+        "next": "高达-向右移动"
     },
     "高达-向右移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "threshold": 0.7,
         "action": "Swipe",
-        "begin": [
-            330,
-            549,
-            1,
-            1
+        "begin": "高达-获取方向键范围",
+        "begin_offset": [
+            70,
+            29.5,
+            -100,
+            -100
         ],
-        "end": [
-            335,
-            549,
-            1,
-            1
+        "end": "高达-获取方向键范围",
+        "end_offset": [
+            100,
+            29.5,
+            -100,
+            -100
         ],
         "duration": 2000,
-        "next": [
-            "高达-调查"
-        ]
+        "next": "高达-调查"
     }
 }

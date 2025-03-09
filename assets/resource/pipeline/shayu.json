@@ -19,8 +19,15 @@
         "recognition": "OCR",
         "expected": "开始挑战",
         "action": "Click",
-        "next": "鲨鱼-举盾",
+        "next": "鲨鱼-获取方向键范围",
         "post_delay": 10000
+    },
+    "鲨鱼-获取方向键范围": {
+        "recognition": "TemplateMatch",
+        "template": "fangxiangjian.png",
+        "action": "DoNothing",
+        "next": "鲨鱼-举盾",
+        "threshold": 0.7
     },
     "鲨鱼-举盾": {
         "action": "Swipe",
@@ -46,29 +53,29 @@
         "recognition": "OCR",
         "expected": "结束",
         "action": "Click",
-        "next": "鲨鱼-移动",
+        "next": "鲨鱼-向上移动",
         "post_delay": 10000
     },
-    "鲨鱼-移动": {
+    "鲨鱼-向上移动": {
         "recognition": "TemplateMatch",
         "template": "diaocha.png",
+        "threshold": 0.7,
         "action": "Swipe",
-        "begin": [
-            310,
-            518,
-            1,
-            1
+        "begin": "鲨鱼-获取方向键范围",
+        "begin_offset": [
+            29.5,
+            -10,
+            -100,
+            -100
         ],
-        "end": [
-            310,
-            498,
-            1,
-            1
+        "end": "鲨鱼-获取方向键范围",
+        "end_offset": [
+            29.5,
+            -50,
+            -100,
+            -100
         ],
-        "duration": 5000,
-        "next": [
-            "鲨鱼-调查",
-            "鲨鱼-移动"
-        ]
+        "duration": 3000,
+        "next": "鲨鱼-调查"
     }
 }
