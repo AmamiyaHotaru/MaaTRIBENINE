@@ -1,4 +1,12 @@
 {
+    "鲨鱼-获取方向键范围": {
+        "timeout": 40000,
+        "recognition": "TemplateMatch",
+        "template": "fangxiangjian.png",
+        "action": "DoNothing",
+        "next": "鲨鱼-调查",
+        "threshold": 0.7
+    },
     "鲨鱼-调查": {
         "recognition": "TemplateMatch",
         "template": "diaocha.png",
@@ -19,16 +27,8 @@
         "recognition": "OCR",
         "expected": "开始挑战",
         "action": "Click",
-        "next": "鲨鱼-获取方向键范围",
-        "post_delay": 15000
-    },
-    "鲨鱼-获取方向键范围": {
-        "timeout": 40000,
-        "recognition": "TemplateMatch",
-        "template": "fangxiangjian.png",
-        "action": "DoNothing",
         "next": "鲨鱼-举盾",
-        "threshold": 0.7
+        "post_delay": 15000
     },
     "鲨鱼-举盾": {
         "action": "Swipe",
