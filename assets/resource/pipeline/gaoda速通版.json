@@ -1,0 +1,268 @@
+{
+    "高达速通-获取方向键范围": {
+        "timeout": 40000,
+        "recognition": "TemplateMatch",
+        "template": "fangxiangjian.png",
+        "action": "DoNothing",
+        "next": "高达速通-调查",
+        "threshold": 0.6
+    },
+    "高达速通-调查": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "action": "Click",
+        "next": [
+            "高达速通-开始挑战",
+            "高达速通-检测追踪",
+            "高达速通-打开地图"
+        ],
+        "post_delay": 3000
+    },
+    "高达速通-检测追踪": {
+        "recognition": "OCR",
+        "expected": "关闭",
+        "action": "Click",
+        "next": "高达速通-打开地图"
+    },
+    "高达速通-打开地图": {
+        "recognition": "TemplateMatch",
+        "template": "boss.png",
+        "action": "Click",
+        "next": "高达速通-是否已打开地图"
+    },
+    "高达速通-是否已打开地图": {
+        "recognition": "OCR",
+        "expected": "港城",
+        "action": "DoNothing",
+        "next": "高达速通-放大地图"
+    },
+    "高达速通-放大地图": {
+        "recognition": "TemplateMatch",
+        "template": "fangda.png",
+        "threshold": 0.95,
+        "action": "Click",
+        "next": [
+            "高达速通-是否是最大放大倍数",
+            "高达速通-放大地图"
+        ]
+    },
+    "高达速通-是否是最大放大倍数": {
+        "recognition": "TemplateMatch",
+        "template": "zuida.png",
+        "threshold": 0.9,
+        "action": "DoNothing",
+        "next": "高达速通-点击篝火"
+    },
+    "高达速通-点击篝火": {
+        "recognition": "TemplateMatch",
+        "template": "gouhuo.png",
+        "action": "Click",
+        "next": "高达速通-点击移动"
+    },
+    "高达速通-点击移动": {
+        "recognition": "OCR",
+        "expected": "移动",
+        "action": "Click",
+        "next": "高达速通-向左移动"
+    },
+    "高达速通-向左移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "threshold": 0.7,
+        "action": "Swipe",
+        "begin": "高达速通-获取方向键范围",
+        "begin_offset": [
+            -10,
+            29.5,
+            -100,
+            -100
+        ],
+        "end": "高达速通-获取方向键范围",
+        "end_offset": [
+            -100,
+            29.5,
+            -100,
+            -100
+        ],
+        "duration": 3000,
+        "next": "高达速通-向上移动"
+    },
+    "高达速通-向上移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "threshold": 0.7,
+        "action": "Swipe",
+        "begin": "高达速通-获取方向键范围",
+        "begin_offset": [
+            29.5,
+            -10,
+            -100,
+            -100
+        ],
+        "end": "高达速通-获取方向键范围",
+        "end_offset": [
+            29.5,
+            -50,
+            -100,
+            -100
+        ],
+        "duration": 3200,
+        "next": "高达速通-调查"
+    },
+    "高达速通-开始挑战": {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "next": "高达速通-确定挑战",
+        "post_delay": 3000
+    },
+    "高达速通-确定挑战": {
+        "recognition": "OCR",
+        "expected": "开始挑战",
+        "action": "Click",
+        "next": "高达速通-识别青山次要技能",
+        "post_delay": 15000
+    },
+    "高达速通-识别青山次要技能": {
+        "recognition": "TemplateMatch",
+        "template": "青山次要技能.png",
+        "action": "DoNothing",
+        "next": "高达速通-第一次使用青山次要技能"
+    },
+    "高达速通-第一次使用青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第二次青山次要技能"
+    },
+    "高达速通-第二次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第三次青山次要技能"
+    },
+    "高达速通-第三次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第四次青山次要技能"
+    },
+    "高达速通-第四次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第五次青山次要技能"
+    },
+    "高达速通-第五次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第六次青山次要技能"
+    },
+    "高达速通-第六次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第七次青山次要技能"
+    },
+    "高达速通-第七次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": "高达速通-第八次青山次要技能"
+    },
+    "高达速通-第八次青山次要技能": {
+        "action": "Click",
+        "target": "高达速通-识别青山次要技能",
+        "next": [
+            "高达速通-结束",
+            "高达速通-检测崩解并使用二号位连携",
+            "高达速通-第七次青山次要技能"
+        ]
+    },
+    "高达速通-检测崩解并使用二号位连携": {
+        "recognition": "TemplateMatch",
+        "template": "崩解.png",
+        "action": "Click",
+        "threshold": 0.7,
+        "next": "高达速通-使用三号位连携"
+    },
+    "高达速通-使用三号位连携": {
+        "action": "Click",
+        "target": "高达速通-检测崩解并使用二号位连携",
+        "target_offset": [
+            0,
+            90,
+            0,
+            0
+        ],
+        "next": "高达速通-使用一号位连携"
+    },
+    "高达速通-使用一号位连携": {
+        "action": "Click",
+        "target": "高达速通-检测崩解并使用二号位连携",
+        "target_offset": [
+            0,
+            -90,
+            0,
+            0
+        ],
+        "next": "高达速通-使用美雨终结技",
+        "post_delay": 1500
+    },
+    "高达速通-使用美雨终结技": {
+        "action": "Click",
+        "target": "高达速通-检测崩解并使用二号位连携",
+        "target_offset": [
+            0,
+            -90,
+            0,
+            0
+        ],
+        "next": "高达速通-第八次青山次要技能"
+    },
+    "高达速通-结束": {
+        "recognition": "OCR",
+        "expected": "结束",
+        "action": "Click",
+        "next": "高达速通-向下移动",
+        "post_delay": 15000
+    },
+    "高达速通-向下移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "threshold": 0.7,
+        "action": "Swipe",
+        "begin": "高达速通-获取方向键范围",
+        "begin_offset": [
+            29.5,
+            70,
+            -100,
+            -100
+        ],
+        "end": "高达速通-获取方向键范围",
+        "end_offset": [
+            29.5,
+            100,
+            -100,
+            -100
+        ],
+        "duration": 400,
+        "next": "高达速通-向右移动"
+    },
+    "高达速通-向右移动": {
+        "recognition": "TemplateMatch",
+        "template": "diaocha.png",
+        "threshold": 0.7,
+        "action": "Swipe",
+        "begin": "高达速通-获取方向键范围",
+        "begin_offset": [
+            70,
+            29.5,
+            -100,
+            -100
+        ],
+        "end": "高达速通-获取方向键范围",
+        "end_offset": [
+            100,
+            29.5,
+            -100,
+            -100
+        ],
+        "duration": 2000,
+        "next": "高达速通-调查"
+    }
+}
