@@ -5,7 +5,7 @@
         "template": "fangxiangjian.png",
         "action": "DoNothing",
         "next": "高达-调查",
-        "threshold": 0.7
+        "threshold": 0.6
     },
     "高达-调查": {
         "recognition": "TemplateMatch",
@@ -72,12 +72,12 @@
         ],
         "end": "高达-获取方向键范围",
         "end_offset": [
-            -40,
+            -100,
             29.5,
             -100,
             -100
         ],
-        "duration": 2000,
+        "duration": 3000,
         "next": "高达-向上移动"
     },
     "高达-向上移动": {

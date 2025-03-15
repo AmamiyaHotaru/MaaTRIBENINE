@@ -5,7 +5,7 @@
         "template": "fangxiangjian.png",
         "action": "DoNothing",
         "next": "鲨鱼-调查",
-        "threshold": 0.7
+        "threshold": 0.6
     },
     "鲨鱼-调查": {
         "recognition": "TemplateMatch",
