@@ -127,6 +127,12 @@
         "recognition": "TemplateMatch",
         "template": "青山次要技能.png",
         "action": "DoNothing",
+        "next": "高达速通-识别青山"
+    },
+    "高达速通-识别青山": {
+        "recognition": "TemplateMatch",
+        "template": "青山.png",
+        "action": "DoNothing",
         "next": "高达速通-第一次使用青山次要技能"
     },
     "高达速通-第一次使用青山次要技能": {
@@ -170,14 +176,38 @@
         "next": [
             "高达速通-结束",
             "高达速通-检测崩解并使用二号位连携",
-            "高达速通-第七次青山次要技能"
+            "高达速通-第八次青山次要技能"
         ]
     },
     "高达速通-检测崩解并使用二号位连携": {
-        "recognition": "TemplateMatch",
-        "template": "崩解.png",
+        "recognition": "ColorMatch",
+        "roi": "高达速通-识别青山",
+        "lower": [
+            [
+                127,
+                61,
+                173
+            ],
+            [
+                235,
+                146,
+                235
+            ]
+        ],
+        "upper": [
+            [
+                147,
+                81,
+                193
+            ],
+            [
+                255,
+                166,
+                255
+            ]
+        ],
+        "count": 10,
         "action": "Click",
-        "threshold": 0.7,
         "next": "高达速通-使用三号位连携"
     },
     "高达速通-使用三号位连携": {
