@@ -25,6 +25,7 @@
     },
     "鲨鱼-确定挑战": {
         "recognition": "OCR",
+        "pre_delay": 2000,
         "expected": "开始挑战",
         "action": "Click",
         "next": "鲨鱼-举盾",
@@ -52,6 +53,7 @@
     },
     "鲨鱼-结束": {
         "recognition": "OCR",
+        "pre_delay": 2000,
         "expected": "结束",
         "action": "Click",
         "next": "鲨鱼-向上移动",
