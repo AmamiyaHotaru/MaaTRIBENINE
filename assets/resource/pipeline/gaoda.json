@@ -16,7 +16,8 @@
             "高达-检测追踪",
             "高达-打开地图"
         ],
-        "post_delay": 3000
+        "post_delay": 3000,
+        "pre_delay": 3000
     },
     "高达-检测追踪": {
         "recognition": "OCR",
@@ -150,51 +151,7 @@
         "pre_delay": 2000,
         "expected": "结束",
         "action": "Click",
-        "next": "高达-向下移动",
+        "next": "高达-调查",
         "post_delay": 15000
-    },
-    "高达-向下移动": {
-        "recognition": "TemplateMatch",
-        "template": "diaocha.png",
-        "threshold": 0.7,
-        "action": "Swipe",
-        "begin": "高达-获取方向键范围",
-        "begin_offset": [
-            29.5,
-            70,
-            -100,
-            -100
-        ],
-        "end": "高达-获取方向键范围",
-        "end_offset": [
-            29.5,
-            100,
-            -100,
-            -100
-        ],
-        "duration": 400,
-        "next": "高达-向右移动"
-    },
-    "高达-向右移动": {
-        "recognition": "TemplateMatch",
-        "template": "diaocha.png",
-        "threshold": 0.7,
-        "action": "Swipe",
-        "begin": "高达-获取方向键范围",
-        "begin_offset": [
-            70,
-            29.5,
-            -100,
-            -100
-        ],
-        "end": "高达-获取方向键范围",
-        "end_offset": [
-            100,
-            29.5,
-            -100,
-            -100
-        ],
-        "duration": 2000,
-        "next": "高达-调查"
     }
 }
